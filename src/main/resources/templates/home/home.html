@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+    <style>
+        .animated {
+            font: 100 1em sans-serif;
+            animation: myAnimation 3s ease 1s 3 alternate forwards;
+        }
+
+        @keyframes myAnimation {
+            100% {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body style="background-image:url(//www.html.am/images/backgrounds/background-image-2.gif);width:300px;height:200px;color:black;font-size:18px;border:1px solid #ccc;padding:5px;" >
+<div class="animated">
+    <h2>Hi <span th:utext="${userName}"></span>, thank you for registering with tracomacademy....</h2>
+    <a th:href="@{/logout}">Sign out</a>
+</div>
+</body>
+</html>
